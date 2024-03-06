@@ -11,9 +11,7 @@ jobs:
       - name: Download iac scanner
         run: |
           curl -k -o sigma ${{ secrets.SIGMA_DOWNLOAD_PATH }}
-          ls -la
           chmod +x sigma
-          ls -la
 
       - name: SIGMA analysis
         run: ./sigma analyze --format github .      
